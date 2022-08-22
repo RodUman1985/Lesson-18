@@ -43,13 +43,39 @@ public class Main {
         //%f - опдстановка вещественного числа
         //%c - подстановка одного символа
 
-       String s3= String.format("My name is  %s. I am %d years old.%1$s is a good boy", name,age);
+       String s3= String.format(" 45%% My name is  %s. I am %d years old.%1$s is a good boy", name,age);// %% - печатает
+        // знак процента (для нескольких - четное количество)
         System.out.println(s3);
         System.out.printf("Age: %d\n",120);
 
         System.out.printf("%1.2s 12\n","hello");
         // первое число- миню ширина строки, второе- длинна форматируемой строки
 
-        System.out.printf("%010d",123);
+        System.out.printf("%010d\n",123);
+        System.out.printf("%10.3f",3.1415);
+        //вывод таблицы умножения
+        System.out.println();
+        for (int i=1; i<=9;i++) {
+            for (int j=1; j<=9;j++){
+                System.out.printf("%d x %d = %2d  ",j,i,i*j);
+            }
+            System.out.println();
+        }
+        // символы управления кареткой
+        // \n -  переход на новую строку
+        // \t - табуляция
+        // \b -  backspace
+        System.out.print("\\Hello\nJava\t!!!\b");
+        System.out.println();
+        String sss = "khjjlkj"+"ada";
+        StringBuffer b =new StringBuffer(1024);
+        b.append("fhfhf");
+        b.append("+dadad");
+        b.append("hghgh");
+        System.out.println(b);
+        // StringtBгffer - потокобезопасен. StringBuilder - не потокобезопасен. Во всем остальном они идентичны
+        
+
+
     }
 }
